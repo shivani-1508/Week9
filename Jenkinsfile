@@ -16,7 +16,7 @@ pipeline{
             steps{
                 echo "push Docker image to docker hub"
                 bat "docker tag kubdemoapp:v1 shivanibonagiri/kubernetes:t1"
-                bat "docker push shivanibonagiri/kubernetes"
+                bat "docker push shivanibonagiri/kubernetes:t1"
             }
         }
         stage("Deploy to kubernetes"){
